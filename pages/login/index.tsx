@@ -5,10 +5,14 @@ import LoginForm from '../../src/auth/login/Login.form';
 
 const useStyles = makeStyles({
     loginContainer: {
+        display: 'flex',
+        justifyContent: 'center',
+        alignContent: 'center',
         backgroundColor: '#121212',
         width: '100%',
-        height: '100vh'
-        
+        height: '100vh',
+        maxWidth: '2000px',
+      alignItems: 'center'
     }
 })
 

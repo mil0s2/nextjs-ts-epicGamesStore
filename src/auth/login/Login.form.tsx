@@ -1,6 +1,6 @@
 import React from 'react';
 import {makeStyles} from '@material-ui/core/styles';
-import {Box} from '@material-ui/core'
+import {Box, TextField, Typography} from '@material-ui/core'
 import {LogoIcon} from '../../../assets/icons'
 
 interface LoginFormProps {
@@ -13,6 +13,14 @@ const LoginForm: React.FC<LoginFormProps> = () => {
     return (
         <Box className={classes.container} >
             <LogoIcon className={classes.logo}/>
+            <Typography variant="subtitle2" className={classes.signIn} >
+                SIGN IN WITH AN EPIC GAMES ACCOUNT
+            </Typography>
+            <form className={classes.form}>
+                <TextField classes={{root: classes.textFieldRoot}} variant="outlined" label = "Email Adress" />
+                <TextField variant="outlined" label = "Password"  />
+
+            </form>
 
         </Box>
     );
@@ -20,6 +28,7 @@ const LoginForm: React.FC<LoginFormProps> = () => {
 
 const useStyles = makeStyles({
     container: {
+        maxHeight: '500px',
         maxWidth: '470px',
         display: 'flex',
         alignItems: 'center',
@@ -34,6 +43,25 @@ const useStyles = makeStyles({
         width: '48px',
         height: '48px',
         marginBottom: '30px'
+    },
+    signIn: {
+        color: 'white',
+        textAlign: 'left',
+        marginTop: '20px',
+        width: '100%'
+    },
+    form: {
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignContent: 'space-between',
+        maxWidth: '380px',
+        width: '100%',
+        marginTop: '20px',
+    },
+    textFieldRoot: {
+        height: '85px',
+        color: 'white'
     }
 })
 
